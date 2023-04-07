@@ -1,12 +1,12 @@
 # bit-test
 
-Repository for Typescript file and associated testing which detects and classifies all Digit patterns at [godid.io](godid.io) (except for Rare4D).
+As part of take-home test for .bit, I created nearly 100 functions in a Typescript file which detects and classifies all Digit patterns at [godid.io](godid.io) (except for Rare4D).
 
 ## Description
 
 To accomplish this feat, I
-* Using Typescript, VanillaJS and RegEx, I wrote detection functions for each of the Digit patterns  (~100)
-* Using TS-Mocha and Chai, wrote 100+ tests in order to ensure accuracy of detection functions are accurate
+* Using Typescript, VanillaJS and RegEx, wrote detection functions for each of the Digit patterns  (~100)
+* Using TS-Mocha and Chai, wrote 100+ tests in order to ensure accuracy of detection functions
 
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).
 
@@ -15,10 +15,9 @@ Full requirements and instructions available [here](https://gist.github.com/renz
 
 * Clone this file
 * From root folder, type ``npm install`` or ``yarn install``
-* Any modifications needed to be made to files/folders
 
-Detection functions located under `src/index.ts`
-Mocha testing file located under `test/index.test.ts`
+Detection functions located under ``src/index.ts``
+Mocha testing file located under ``test/index.test.ts``
 
 ### Dependencies
 
@@ -27,13 +26,17 @@ Mocha testing file located under `test/index.test.ts`
 
 ### Executing program
 
-* npm start or npm run dev to execute basic tests for the file
-* npm test to run through all tests
-Note- if you already have your own testing framework in place, then you can simply copy and paste the src/index.ts file directly into your own testing folder. 
+* ``npm start`` or ``npm run dev`` to execute suggested tests for the file
+Note- you can add additional tests to the ``src/index.ts`` file by simply adding the following methods to the end of the file:
+  ``assert.deepEqual(detectPatterns("XXX.bit"), new Set(["XXX"]));``
+  
+* ``npm test`` to run through all 100+ tests using the Mocha/Chai framework
+Note- if you already have your own testing framework in place, then you can simply copy and paste the src/index.ts file directly into your own testing folder.
+
 
 ## Help
 
-Any issues or questions, please contact me: robliou01@gmail.com
+Any issues or questions, feel free to contact me: robliou01@gmail.com
 
 ## Authors
 

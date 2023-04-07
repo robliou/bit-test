@@ -5,7 +5,7 @@ Repository for Typescript file and associated testing which detects and classifi
 ## Description
 
 To accomplish this feat, I
-* Using Typescript, VanillaJS and RegEx, I wrote detection functions for each of the Digit patterns  (nearly 100)
+* Using Typescript, VanillaJS and RegEx, I wrote detection functions for each of the Digit patterns  (~100)
 * Using TS-Mocha and Chai, wrote 100+ tests in order to ensure accuracy of detection functions are accurate
 
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).

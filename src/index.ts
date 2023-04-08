@@ -1,6 +1,6 @@
 import assert from "assert";
 
-//Functions
+//Functions below represent classification tests for Digit patterns at [godid.io]
 
 function assert999(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
@@ -96,13 +96,14 @@ function assert999CN(bitName: string): boolean {
 function assertArabic999(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
   const regex = /^^([\u0600-\u06FF]){3}$/;
-
+  //Arabic numerals reference: https://stackoverflow.com/questions/29729391/regular-expression-arabic-characters-and-numbers-only
   return regex.test(string2);
 }
 
 function assertFlag999(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
   const regex = /^[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF][0-9]{3}$/;
+  //Country flag detection with regex: https://stackoverflow.com/questions/53360006/detect-with-regex-if-emoji-is-country-flag
   return regex.test(string2);
 }
 
@@ -125,10 +126,8 @@ function assertABCD(bitName: string): boolean {
   );
 }
 
-//Note all functions above have been tested
 function assertAAAA(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -141,9 +140,7 @@ function assertAAAA(bitName: string): boolean {
 }
 
 function assertABBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -156,9 +153,7 @@ function assertABBB(bitName: string): boolean {
 }
 
 function assertAABB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -171,9 +166,7 @@ function assertAABB(bitName: string): boolean {
 }
 
 function assertAAAB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -186,9 +179,7 @@ function assertAAAB(bitName: string): boolean {
 }
 
 function assertABAA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -202,9 +193,7 @@ function assertABAA(bitName: string): boolean {
 }
 
 function assertAABA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -218,9 +207,7 @@ function assertAABA(bitName: string): boolean {
 }
 
 function assertABBA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -234,9 +221,7 @@ function assertABBA(bitName: string): boolean {
 }
 
 function assertABAB(bitName: string): boolean {
-  //const num = bitName.replace('.bit', '');
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -249,9 +234,7 @@ function assertABAB(bitName: string): boolean {
 }
 
 function assertAABC(bitName: string): boolean {
-  //const num = bitName.replace('.bit', '');
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -265,9 +248,7 @@ function assertAABC(bitName: string): boolean {
 }
 
 function assertABCC(bitName: string): boolean {
-  //const num = bitName.replace('.bit', '');
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -281,9 +262,7 @@ function assertABCC(bitName: string): boolean {
 }
 
 function assertABBC(bitName: string): boolean {
-  //const num = bitName.replace('.bit', '');
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{4}$/;
 
@@ -299,68 +278,48 @@ function assertABBC(bitName: string): boolean {
 function assert0XXX(bitName: string): boolean {
   const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0[0-9]{3}$/;
 
   return regex.test(string2);
 }
 
 function assert00XX(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^00[0-9]{2}$/;
 
   return regex.test(string2);
 }
 
 function assert0X0X(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0[0-9]{1}0[0-9]{1}$/;
 
   return regex.test(string2);
 }
 
 function assert0XX0(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0[0-9]{1}[0-9]{1}0$/;
 
   return regex.test(string2);
 }
 
 function assertXX00(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{1}[0-9]{1}00$/;
 
   return regex.test(string2);
 }
 
 function assertXX88(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{1}[0-9]{1}88$/;
 
   return regex.test(string2);
 }
 
 function assertXX69(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{1}[0-9]{1}69$/;
 
   return regex.test(string2);
@@ -369,19 +328,14 @@ function assertXX69(bitName: string): boolean {
 function assertTimesTable(bitName: string): boolean {
   const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = num.toString().split("").map(Number);
   let value = digits[0] * digits[1];
   let formattedValue = value.toLocaleString("en-US", {
     minimumIntegerDigits: 2,
   });
-  //console.log("this is formattedValue", formattedValue);
-
   let valueDigits: number[] = formattedValue.toString().split("").map(Number);
-  //console.log("this is valueDigits[1]", valueDigits[1]);
-  //const regex = /`^[0-9]{2}${valueDigits[0]}| ${valueDigits[1]}$`/;
   const regex = new RegExp(`^[0-9]{2}${valueDigits[0]}${valueDigits[1]}$`);
-  //for inserting dynamic variables. ChatGPT came up with this
+  //for inserting dynamic variables. ChatGPT came up with this.
 
   return regex.test(string2);
 }
@@ -389,8 +343,6 @@ function assertTimesTable(bitName: string): boolean {
 function assertMMDD(bitName: string): boolean {
   const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])$/;
   //This formula was generated via ChatGPT, following my strict prompts
 
@@ -400,8 +352,6 @@ function assertMMDD(bitName: string): boolean {
 function assert0x10K(bitName: string): boolean {
   const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0x[0-9]{4}$/;
 
   return regex.test(string2);
@@ -409,26 +359,20 @@ function assert0x10K(bitName: string): boolean {
 
 function assertArabic10K(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
-  //console.log("this is Arabic string2", string2);
   const regex = /^([\u0600-\u06FF]){4}$/;
-
+  //Arabic numerals reference: https://stackoverflow.com/questions/29729391/regular-expression-arabic-characters-and-numbers-only
   return regex.test(string2);
 }
 
 function assert100K(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
   return regex.test(string2);
 }
 
 function assertAAAAA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -442,9 +386,7 @@ function assertAAAAA(bitName: string): boolean {
 }
 
 function assertABCDE(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -458,9 +400,7 @@ function assertABCDE(bitName: string): boolean {
 }
 
 function assertABBBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -474,9 +414,7 @@ function assertABBBB(bitName: string): boolean {
 }
 
 function assertAABBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -490,9 +428,7 @@ function assertAABBB(bitName: string): boolean {
 }
 
 function assertAAABB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -506,9 +442,7 @@ function assertAAABB(bitName: string): boolean {
 }
 
 function assertAAAAB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -522,9 +456,7 @@ function assertAAAAB(bitName: string): boolean {
 }
 
 function assertABBBA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -539,9 +471,7 @@ function assertABBBA(bitName: string): boolean {
 }
 
 function assertABAAA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -555,9 +485,7 @@ function assertABAAA(bitName: string): boolean {
 }
 
 function assertAABAA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -571,9 +499,7 @@ function assertAABAA(bitName: string): boolean {
 }
 
 function assertAAABA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -587,9 +513,7 @@ function assertAAABA(bitName: string): boolean {
 }
 
 function assertABABA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -603,9 +527,7 @@ function assertABABA(bitName: string): boolean {
 }
 
 function assertXABCD(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -618,49 +540,35 @@ function assertXABCD(bitName: string): boolean {
 }
 
 function assertXX000(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{2}000$/;
 
   return regex.test(string2);
 }
 
 function assert00XX0(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^00[0-9]{2}0$/;
 
   return regex.test(string2);
 }
 
 function assert000XX(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^000[0-9]{2}$/;
 
   return regex.test(string2);
 }
 
 function assertXX420(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{2}420$/;
 
   return regex.test(string2);
 }
 
 function assertAAABC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -675,9 +583,7 @@ function assertAAABC(bitName: string): boolean {
 }
 
 function assertAABBC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -692,9 +598,7 @@ function assertAABBC(bitName: string): boolean {
 }
 
 function assertAABCC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -709,9 +613,7 @@ function assertAABCC(bitName: string): boolean {
 }
 
 function assertABCCC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -726,9 +628,7 @@ function assertABCCC(bitName: string): boolean {
 }
 
 function assertABBCC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -743,9 +643,7 @@ function assertABBCC(bitName: string): boolean {
 }
 
 function assertABBBC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -760,10 +658,7 @@ function assertABBBC(bitName: string): boolean {
 }
 
 function assertABCBA(bitName: string): boolean {
-  //Double check my test for this one? Run some more tests...
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{5}$/;
 
@@ -778,49 +673,35 @@ function assertABCBA(bitName: string): boolean {
 }
 
 function assertXXX69(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{3}69$/;
 
   return regex.test(string2);
 }
 
 function assert69XXX(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^69[0-9]{3}$/;
 
   return regex.test(string2);
 }
 
 function assert00XXX(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^00[0-9]{3}$/;
 
   return regex.test(string2);
 }
 
 function assertXXX00(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{3}00$/;
 
   return regex.test(string2);
 }
 
 function assertAAAAAA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -835,9 +716,7 @@ function assertAAAAAA(bitName: string): boolean {
 }
 
 function assertABBBBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -852,9 +731,7 @@ function assertABBBBB(bitName: string): boolean {
 }
 
 function assertAABBBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -869,9 +746,7 @@ function assertAABBBB(bitName: string): boolean {
 }
 
 function assertAAABBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -886,9 +761,7 @@ function assertAAABBB(bitName: string): boolean {
 }
 
 function assertAAAABB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -903,9 +776,7 @@ function assertAAAABB(bitName: string): boolean {
 }
 
 function assertAAAAAB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -920,9 +791,7 @@ function assertAAAAAB(bitName: string): boolean {
 }
 
 function assertABBABB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -937,9 +806,7 @@ function assertABBABB(bitName: string): boolean {
 }
 
 function assertABABAB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -954,19 +821,14 @@ function assertABABAB(bitName: string): boolean {
 }
 
 function assert00XX00(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^00[0-9]{2}00$/;
 
   return regex.test(string2);
 }
 
 function assertAABBCC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -982,9 +844,7 @@ function assertAABBCC(bitName: string): boolean {
 }
 
 function assertABCCCC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -1000,9 +860,7 @@ function assertABCCCC(bitName: string): boolean {
 }
 
 function assertABBBBC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -1018,9 +876,7 @@ function assertABBBBC(bitName: string): boolean {
 }
 
 function assertAAAABC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -1036,9 +892,7 @@ function assertAAAABC(bitName: string): boolean {
 }
 
 function assertABCABC(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{6}$/;
 
@@ -1054,69 +908,49 @@ function assertABCABC(bitName: string): boolean {
 }
 
 function assertXXX420(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{3}420$/;
 
   return regex.test(string2);
 }
 
 function assert420XXX(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^420[0-9]{3}$/;
 
   return regex.test(string2);
 }
 
 function assertXXX000(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{3}000$/;
 
   return regex.test(string2);
 }
 
 function assert000XXX(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^000[0-9]{3}$/;
 
   return regex.test(string2);
 }
 
 function assertAShareCode(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^60[0|1|3][0-9]{3}|000[0-9]{3}$/;
 
   return regex.test(string2);
 }
 
 function assertXXXX69(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{4}69$/;
 
   return regex.test(string2);
 }
 
 function assertAAABBBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{7}$/;
 
@@ -1132,9 +966,7 @@ function assertAAABBBB(bitName: string): boolean {
 }
 
 function assertAAAABBBB(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{8}$/;
 
@@ -1151,9 +983,7 @@ function assertAAAABBBB(bitName: string): boolean {
 }
 
 function assertABBCBBA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{7}$/;
 
@@ -1170,19 +1000,14 @@ function assertABBCBBA(bitName: string): boolean {
 }
 
 function assertWanClub(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^[0-9]{3}0000$/;
 
   return regex.test(string2);
 }
 
 function assertXXXAAAAAAAA(bitName: string): boolean {
-  //const num = parseInt(bitName.replace('.bit', ''), 10);
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{11}$/;
 
@@ -1199,50 +1024,35 @@ function assertXXXAAAAAAAA(bitName: string): boolean {
 }
 
 function assert0x9(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0x[0-9]$/;
 
   return regex.test(string2);
 }
 
 function assert0x99(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0x[0-9]{2}$/;
 
   return regex.test(string2);
 }
 
 function assert1Hex(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0x[0-9,A,B,C,D,E,F,abcdef]$/;
 
   return regex.test(string2);
 }
 
 function assert2Hex(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0x[0-9,A,B,C,D,E,F,abcdef]{2}$/;
 
   return regex.test(string2);
 }
 
 function assert3Hex(bitName: string): boolean {
-  const num = parseInt(bitName.replace(".bit", ""), 10);
   let string2 = bitName.replace(".bit", "");
-
-  const digits: number[] = num.toString().split("").map(Number);
   const regex = /^0x[0-9,A,B,C,D,E,F,abcdef]{3}$/;
 
   return regex.test(string2);
@@ -1251,7 +1061,7 @@ function assert3Hex(bitName: string): boolean {
 //tests
 
 export default function detectPatterns(name: `${string}.bit`): Set<string> {
-  const functionSet = new Set<string>(); // Create a new empty Set
+  const functionSet = new Set<string>(); // Creates a new empty Set
 
   if (assert999(name) === true) {
     functionSet.add("999");
@@ -1633,11 +1443,11 @@ export default function detectPatterns(name: `${string}.bit`): Set<string> {
   return functionSet; // Return the Set
 }
 
-const bitName = "77377.bit";
-
+//const bitName = "77377.bit";
 //console.log("this is detectPatterns", detectPatterns(bitName));
+//Unslash if want to see classifications returned based on 'bitName' above
 
-//run basic tests
+//run basic tests as suggested at `https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74`
 assert.deepEqual(detectPatterns("333.bit"), new Set(["AAA", "999"]));
 assert.deepEqual(detectPatterns("2112.bit"), new Set(["ABBA", "10K"]));
 assert.deepEqual(detectPatterns("45555.bit"), new Set(["ABBBB", "100K"]));

@@ -125,6 +125,14 @@ describe("DetectPatterns", () => {
 });
 
 describe("DetectPatterns", () => {
+  it('`2220000.bit` should result in "AAABBBB","WanClub"', () => {
+    let bitName: `${string}.bit` = "2220000.bit";
+    const result = detectPatterns(bitName);
+    assert.deepEqual(result, new Set(["AAABBBB", "WanClub"]));
+  });
+});
+
+describe("DetectPatterns", () => {
   it('`2335332.bit` should result in "ABBCBBA"', () => {
     let bitName: `${string}.bit` = "2335332.bit";
     const result = detectPatterns(bitName);
@@ -782,6 +790,14 @@ describe("DetectPatterns", () => {
     let bitName: `${string}.bit` = "601234.bit";
     const result = detectPatterns(bitName);
     assert.deepEqual(result, new Set(["AShareCode"]));
+  });
+});
+
+describe("DetectPatterns", () => {
+  it('`601601.bit` should result in "AShareCode", "ABCABC"', () => {
+    let bitName: `${string}.bit` = "601601.bit";
+    const result = detectPatterns(bitName);
+    assert.deepEqual(result, new Set(["AShareCode", "ABCABC"]));
   });
 });
 

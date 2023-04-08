@@ -21,6 +21,7 @@ this will have to suffice for now.
 * From root folder, type ``npm install`` or ``yarn install``
 
 Detection functions located under ``src/index.ts``
+
 Mocha testing file located under ``test/index.test.ts``
 
 ### Dependencies
@@ -32,10 +33,12 @@ Mocha testing file located under ``test/index.test.ts``
 ### Executing program
 
 * ``npm start`` or ``npm run dev`` to execute suggested tests for the file
+ 
 ** Note- you can run additional tests on the ``src/index.ts`` file by simply adding testing methods to the end of the file using the following signature:
   ``assert.deepEqual(detectPatterns("XXX.bit"), new Set(["XXX"]));``
   
 * ``npm test`` to run through all 100+ tests using the Mocha/Chai framework
+
 ** Note- if you already have your own testing framework in place, then you can simply copy and paste the ``src/index.ts`` file directly into your own testing folder
 
 

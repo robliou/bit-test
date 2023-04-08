@@ -12,17 +12,17 @@ To accomplish this feat, I used
 
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).
 
-** Note- To further capture potential errors, an additional 100+ tests could've been written, but due to prior work commitments, 
-this will have to suffice for now.
+*Note- To further capture potential errors, an additional 100+ tests could've been written, but due to prior work commitments, 
+this will have to suffice for now.*
 
 ## Getting Started
 
 * Clone this file into a preferred folder on your local hard drive
 * From root folder, type ``npm install`` or ``yarn install``
 
-Detection functions located under ``src/index.ts``
+*Detection functions located under ``src/index.ts``*
 
-Mocha testing file located under ``test/index.test.ts``
+*Mocha testing file located under ``test/index.test.ts``*
 
 ### Dependencies
 
@@ -34,12 +34,12 @@ Mocha testing file located under ``test/index.test.ts``
 
 * ``npm start`` or ``npm run dev`` to execute suggested tests for the file
  
-** Note- you can run additional tests on the ``src/index.ts`` file by simply adding testing methods to the end of the file using the following signature:
-  ``assert.deepEqual(detectPatterns("XXX.bit"), new Set(["XXX"]));``
+*Note- you can run additional tests on the ``src/index.ts`` file by simply adding testing methods to the end of the file using the following signature:
+  ``assert.deepEqual(detectPatterns("XXX.bit"), new Set(["XXX"]));``*
   
 * ``npm test`` to run through all 100+ tests using the Mocha/Chai framework
 
-** Note- if you already have your own testing framework in place, then you can simply copy and paste the ``src/index.ts`` file directly into your own testing folder
+*Note- if you already have your own testing framework in place, then you can simply copy and paste the ``src/index.ts`` file directly into your own testing folder*
 
 
 ## Help
@@ -48,7 +48,7 @@ Any issues or questions, feel free to contact me: robliou01@gmail.com
 
 ## Authors
 
-Rob Liou (刘玉声): [robliou.github.io](robliou.github.io)
+Rob Liou (刘玉声): [robliou.github.io](https://robliou.github.io/)
 
 ## Acknowledgments
 

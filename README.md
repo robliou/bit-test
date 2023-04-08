@@ -1,4 +1,4 @@
-![A1](https://user-images.githubusercontent.com/81087205/230696736-7751e65b-05fb-4e28-9ca3-48f530101fa6.png)
+<p align="center"> ![A1](https://user-images.githubusercontent.com/81087205/230696736-7751e65b-05fb-4e28-9ca3-48f530101fa6.png) </p>
 
 # bit-test
 
@@ -27,6 +27,7 @@ Mocha testing file located under ``test/index.test.ts``
 
 * Typescript (main functionality)
 * TS-Mocha and Chai (Testing)
+* TS-Node
 
 ### Executing program
 

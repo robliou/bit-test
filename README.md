@@ -12,8 +12,8 @@ To accomplish this feat, I used
 
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).
 
-*Note- To further capture potential errors, an additional 100+ tests could've been written, but due to prior work commitments, 
-this will have to suffice for now.*
+*Note- To further capture potential errors, an additional 100+ tests could've been written, but due to prior commitments, 
+this will suffice for now.*
 
 ## Getting Started
 

@@ -1,3 +1,5 @@
+![A1](https://user-images.githubusercontent.com/81087205/230697170-927433cf-bf5d-4f51-ab1e-fa95395baf4d.png)
+
 # bit-test
 
 To fulfill .bit's Full-Stack Engineer interview process, I created nearly 100 functions and 100+ Mocha/Chai tests which can be used to detect and classify all Digit patterns at [godid.io](godid.io).

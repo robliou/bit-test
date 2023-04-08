@@ -1,4 +1,4 @@
-                         ![A1](https://user-images.githubusercontent.com/81087205/230696736-7751e65b-05fb-4e28-9ca3-48f530101fa6.png) 
+![A1](https://user-images.githubusercontent.com/81087205/230697170-927433cf-bf5d-4f51-ab1e-fa95395baf4d.png)
 
 # bit-test
 
@@ -7,13 +7,13 @@ I created nearly 100 functions in a Typescript file and 100+ Mocha/Chai tests wh
 ## Description
 
 To accomplish this feat, I
-* used Typescript, VanillaJS and RegEx to wrote detection functions for each of the Digit patterns  (~100)
-* used TS-Mocha and Chai to write 100+ tests in order to ensure accuracy of detection functions
+* used Typescript, VanillaJS and RegEx to write detection functions for each of the Digit patterns  (~100)
+* used TS-Mocha and Chai to write 100+ tests in order to ensure the accuracy of detection functions
 
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).
 
-** Note- To further capture potential errors, an additional 100+ tests could've been written, but due to other work commitments and time constraints, 
-this will have to suffice for now.
+** Note- To further capture potential errors, an additional 100+ tests could've been written, but due to prior work commitments and time constraints, 
+this will suffice for now.
 
 ## Getting Started
 
@@ -32,11 +32,11 @@ Mocha testing file located under ``test/index.test.ts``
 ### Executing program
 
 * ``npm start`` or ``npm run dev`` to execute suggested tests for the file
-** Note- you can run additional tests to the ``src/index.ts`` file by simply adding methods to the end of the file using the following signature:
+** Note- you can run additional tests on the ``src/index.ts`` file by simply adding testing methods to the end of the file using the following signature:
   ``assert.deepEqual(detectPatterns("XXX.bit"), new Set(["XXX"]));``
   
 * ``npm test`` to run through all 100+ tests using the Mocha/Chai framework
-** Note- if you already have your own testing framework in place, then you can simply copy and paste the src/index.ts file directly into your own testing folder
+** Note- if you already have your own testing framework in place, then you can simply copy and paste the ``src/index.ts`` file directly into your own testing folder
 
 
 ## Help

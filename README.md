@@ -44,7 +44,7 @@ this will suffice for now.*
 
 ## Help
 
-Any issues or questions, feel free to contact me: robliou01@gmail.com
+Any issues or questions, please feel free to contact me: robliou01@gmail.com
 
 ## Authors
 

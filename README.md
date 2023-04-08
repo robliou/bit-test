@@ -1,8 +1,13 @@
 ![A1](https://user-images.githubusercontent.com/81087205/230697170-927433cf-bf5d-4f51-ab1e-fa95395baf4d.png)
 
+<p align="center" width="100%">
+    <img width="33%" src="[https://i.stack.imgur.com/RJj4x.png](https://user-images.githubusercontent.com/81087205/230697170-927433cf-bf5d-4f51-ab1e-fa95395baf4d.png)">
+</p>
+
+
 # bit-test
 
-I created nearly 100 functions and 100+ Mocha/Chai tests which can be used to detect and classify all Digit patterns at [godid.io](godid.io) (except for Rare4D).
+I created nearly 100 functions and 100+ Mocha/Chai tests which can be used to detect and classify all Digit patterns at [godid.io](godid.io).
 
 ## Description
 

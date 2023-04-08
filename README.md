@@ -1,4 +1,4 @@
-<p align="center"> [A1](https://user-images.githubusercontent.com/81087205/230696736-7751e65b-05fb-4e28-9ca3-48f530101fa6.png) </p>
+                         ![A1](https://user-images.githubusercontent.com/81087205/230696736-7751e65b-05fb-4e28-9ca3-48f530101fa6.png) 
 
 # bit-test
 

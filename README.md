@@ -1,6 +1,4 @@
-<p align="center" width="100%">
-    <img width="33%" src="[https://i.stack.imgur.com/RJj4x.png](https://user-images.githubusercontent.com/81087205/230697170-927433cf-bf5d-4f51-ab1e-fa95395baf4d.png)">
-</p>
+![A1](https://user-images.githubusercontent.com/81087205/230697170-927433cf-bf5d-4f51-ab1e-fa95395baf4d.png)
 
 # bit-test
 
@@ -8,9 +6,9 @@ I created nearly 100 functions and 100+ Mocha/Chai tests which can be used to de
 
 ## Description
 
-To accomplish this feat, I
-* used Typescript, VanillaJS and RegEx to write detection functions for each of the Digit patterns  (~100)
-* used TS-Mocha and Chai to write 100+ tests in order to ensure the accuracy of detection functions
+To accomplish this feat, I used
+* Typescript, VanillaJS and RegEx to write detection functions for each of the Digit patterns  (~100)
+* TS-Mocha and Chai to write 100+ tests in order to ensure the accuracy of detection functions
 
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).
 
@@ -28,8 +26,8 @@ Mocha testing file located under ``test/index.test.ts``
 ### Dependencies
 
 * Typescript (main functionality)
-* TS-Mocha and Chai (Testing)
-* TS-Node
+* TS-Mocha and Chai (testing)
+* TS-Node (compilation framework)
 
 ### Executing program
 

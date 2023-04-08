@@ -1,12 +1,14 @@
 import assert from "assert";
+//required for tests at bottom of file
 
 //Functions below represent classification tests for Digit patterns at [godid.io]
 
 function assert999(bitName: string): boolean {
+  //each function to return a boolean variable, assess whether tests are passed or not
   let string2 = bitName.replace(".bit", "");
-
+  //in order to obtain a pure String, remove the suffix ".bit" from bitName and replace it with ""
   const num = parseInt(string2);
-
+  //for numerical tests, need to convert string2 to an integer
   const regex = /^[0-9]{3}$/;
 
   return regex.test(string2) && !isNaN(num) && num >= 0 && num < 1000;
@@ -14,8 +16,8 @@ function assert999(bitName: string): boolean {
 
 function assertAAA(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
+  //for RegEx testing, use .split to gather each digit for string and .map(Number) to place each digit into the number[] array
   const regex = /^[0-9]{3}$/;
 
   return (
@@ -25,7 +27,6 @@ function assertAAA(bitName: string): boolean {
 
 function assertABC(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{3}$/;
 
@@ -49,7 +50,6 @@ function assertABB(bitName: string): boolean {
 
 function assertABA(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{3}$/;
 
@@ -60,7 +60,6 @@ function assertABA(bitName: string): boolean {
 
 function assertAAB(bitName: string): boolean {
   let string2 = bitName.replace(".bit", "");
-
   const digits: number[] = string2.toString().split("").map(Number);
   const regex = /^[0-9]{3}$/;
 
@@ -1443,9 +1442,13 @@ export default function detectPatterns(name: `${string}.bit`): Set<string> {
   return functionSet; // Return the Set
 }
 
-//const bitName = "77377.bit";
-//console.log("this is detectPatterns", detectPatterns(bitName));
-//Unslash if want to see classifications returned based on 'bitName' above
+const bitName = "77377.bit";
+console.log("this is bitName", bitName);
+console.log(
+  "this is classification(s) returned using detectPatterns",
+  detectPatterns(bitName)
+);
+//Use formula above to see classifications returned based on 'bitName' variable
 
 //run basic tests as suggested at `https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74`
 assert.deepEqual(detectPatterns("333.bit"), new Set(["AAA", "999"]));

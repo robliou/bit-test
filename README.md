@@ -2,7 +2,7 @@
 
 # bit-test
 
-I created nearly 100 functions in a Typescript file and 100+ Mocha/Chai tests which can be used to detect and classify all Digit patterns at [godid.io](godid.io) (except for Rare4D).
+I created nearly 100 functions and 100+ Mocha/Chai tests which can be used to detect and classify all Digit patterns at [godid.io](godid.io) (except for Rare4D).
 
 ## Description
 
@@ -12,8 +12,8 @@ To accomplish this feat, I
 
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).
 
-** Note- To further capture potential errors, an additional 100+ tests could've been written, but due to prior work commitments and time constraints, 
-this will suffice for now.
+** Note- To further capture potential errors, an additional 100+ tests could've been written, but due to prior work commitments, 
+this will have to suffice for now.
 
 ## Getting Started
 

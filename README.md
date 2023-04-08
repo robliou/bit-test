@@ -14,7 +14,7 @@ To accomplish this feat, I used
 Full requirements and instructions available [here](https://gist.github.com/renzholy/f857b464518e0cf97549a3aee141bd74).
 
 _Note- To further capture potential errors, I could've written additional tests, but due to prior commitments,
-this has to suffice for now._
+this should suffice for now._
 
 ## Getting Started
 

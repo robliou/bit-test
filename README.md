@@ -53,7 +53,6 @@ Rob Liou (刘玉声): [robliou.github.io](https://robliou.github.io/)
 ## Acknowledgments
 
 * [Regex playground tester](https://regex101.com/)
-* [RegEx Reference Guide](https://www.freecodecamp.org/news/regular-expressions-for-beginners/)
 * [TS/JS Playground Tester](https://leetcode.com/playground/new/empty)
 * [TS-Mocha Setup Guide](https://www.npmjs.com/package/ts-mocha)
 * [Arabic Numbers Reference](https://stackoverflow.com/questions/29729391/regular-expression-arabic-characters-and-numbers-only)

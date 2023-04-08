@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^18.15.11",
     "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.3"
   },
   "devDependencies": {

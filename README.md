@@ -2,7 +2,7 @@
 
 # bit-test
 
-I created nearly 100 functions and 100+ Mocha/Chai tests which can be used to detect and classify all Digit patterns at [godid.io](godid.io).
+As part of a project for .bit, I created nearly 100 functions and 100+ Mocha/Chai tests which can be used to detect and classify all Digit patterns at [godid.io](godid.io).
 
 ## Description
 
